@@ -1,0 +1,219 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #131313;
+}
+
+/* Header section */
+header {
+    background: url('https://i.pinimg.com/originals/0e/88/2c/0e882cb6cd424a1a43bf572912a86425.jpg') no-repeat center center/cover; /* Thêm ảnh nền */
+    color: rgb(31, 30, 30);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(16, 15, 15);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: #ff6347; /* Đổi màu khi hover */
+}
+
+
+
+/* Home section */
+#home {
+    background: url('https://hanoispiritofplace.com/wp-content/uploads/2017/12/hinh-anh-cuon-sach-dep-1.jpg') no-repeat center center/cover; /* Thêm ảnh nền */
+    color: rgb(10, 10, 10);
+    padding: 80px 20px; /* Tăng padding cho trang chủ */
+    text-align: center;
+    min-height: 400px; /* Đảm bảo chiều cao phù hợp */
+    position: relative;
+}
+
+/* Loại bỏ khung bao quanh */
+.home-container {
+    /* Xóa background color và border */
+    background-color: transparent; /* Xóa nền mờ */
+    border: none; /* Xóa border */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0; /* Xóa padding nếu không muốn có khoảng cách */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#home h2 {
+    font-size: 2.5rem; /* Cỡ chữ lớn hơn */
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 1.5rem; /* Cỡ chữ lớn hơn */
+}
+
+
+
+/* Books section */
+#books {
+    padding: 50px 20px;
+    text-align: center;
+    background: #fff;
+}
+
+#books h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.book-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Cho phép các item xuống dòng khi không đủ chỗ */
+}
+
+.book-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    width: 220px; /* Điều chỉnh chiều rộng của khung sách */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng cho khung */
+    border-radius: 10px; /* Bo góc */
+    overflow: hidden; /* Đảm bảo ảnh không tràn ra ngoài */
+    transition: transform 0.3s ease; /* Hiệu ứng di chuyển khi hover */
+}
+
+.book-item:hover {
+    transform: translateY(-10px); /* Di chuyển lên khi hover */
+}
+
+.book-image {
+    width: 100%;
+    height: 200px; /* Đặt chiều cao cố định cho ảnh */
+    object-fit: cover; /* Giữ tỉ lệ ảnh và cắt bớt để lấp đầy khung */
+    border-radius: 8px;
+    margin-bottom: 10px; /* Khoảng cách giữa ảnh và tiêu đề */
+}
+
+.book-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.book-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Nút thêm vào giỏ hàng */
+.add-to-cart {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px; /* Khoảng cách giữa mô tả sách và nút */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng chuyển màu mượt mà */
+    width: 100%; /* Đặt nút chiếm toàn bộ chiều rộng của khung sách */
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9; /* Đổi màu khi hover */
+    transform: translateY(-2px); /* Tạo hiệu ứng nâng nhẹ khi hover */
+}
+
+.add-to-cart:active {
+    background-color: #1d6b8f; /* Màu khi nhấn */
+    transform: translateY(2px); /* Tạo hiệu ứng nhấn */
+}
+
+
+/* About section */
+#about, #contact {
+    padding: 50px 20px;
+    text-align: center;
+    background: #e0e0e0;
+}
+
+#about h2, #contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about p, #contact p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Cart section */
+#cart {
+    background: #f4f4f4;
+    color: #333;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#cart button {
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#cart button:hover {
+    background: #2980b9; /* Đổi màu khi hover */
+}
+
+/* Footer */
+
+footer {
+    background: url('') no-repeat center center/cover; /* Thêm ảnh nền */
+    color: rgb(28, 27, 27);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    background-size: cover; /* Đảm bảo hình ảnh sẽ phủ toàn bộ phần footer */
+    background-position: center center; /* Đặt vị trí của ảnh tại trung tâm */
+}
+
+
+/* Smooth scrolling when clicking on navigation links */
+html {
+    scroll-behavior: smooth; /* Đảm bảo cuộn mượt khi click vào các liên kết */
+}
